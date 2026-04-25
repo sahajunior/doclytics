@@ -79,7 +79,7 @@ export default function WorkspacePage() {
               <div className="w-8 h-8 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                 <FileText className="w-4 h-4 text-primary" />
               </div>
-              <h1 className="text-2xl font-bold text-foreground tracking-tight">DocuMind</h1>
+              <h1 className="text-2xl font-bold text-foreground tracking-tight">Doclytics</h1>
             </div>
             <p className="text-sm text-muted-foreground ml-10">
               Chat with your documents using AI

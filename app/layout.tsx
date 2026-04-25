@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'DocuMind — RAG',
+  title: 'Doclytics',
   description: 'Chat with your documents using AI',
 }
 

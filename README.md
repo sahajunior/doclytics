@@ -1,4 +1,4 @@
-# DocuMind — RAG Document Q&A
+# Doclytics — RAG Document Q&A
 
 A production-grade **Retrieval-Augmented Generation** (RAG) system that lets you upload PDFs and ask questions grounded in their content. Built to demonstrate full-stack AI system design: ingestion, vector search, context injection, and streaming LLM generation.
 
