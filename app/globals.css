@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── Light mode ──────────────────────────────────── */
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 94%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 94%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 88%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 53%;
+
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 87%;
+    --input: 0 0% 87%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.5rem;
+
+    /* extra accent tokens */
+    --accent-soft: 262 65% 83%;
+    --accent-highlight: 262 83% 65%;
+    --bubble-from: 262 83% 52%;
+    --bubble-to: 262 70% 65%;
+  }
+
+  /* ── Dark mode ───────────────────────────────────── */
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 94%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 94%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 94%;
+
+    --primary: 251 26% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 94%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 52%;
+
+    --accent: 0 0% 16%;
+    --accent-foreground: 0 0% 94%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 255 92% 76%;
+
+    --radius: 0.5rem;
+
+    /* extra accent tokens */
+    --accent-soft: 257 65% 83%;
+    --accent-highlight: 255 92% 76%;
+    --bubble-from: 251 26% 44%;
+    --bubble-to: 255 85% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .bubble-user {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--bubble-from)) 0%,
+      hsl(var(--bubble-to)) 100%
+    );
+    color: hsl(var(--primary-foreground));
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 2px;
+  }
+}
